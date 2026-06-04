@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NEXUS E-COMMERCE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">NEXUS</div>
+      <nav class="nav">
+        <a class="nav-link" href="#" data-route="home">Home</a>
+        <a class="nav-link" href="#" data-route="products">Products</a>
+        <a class="nav-link" href="#" data-route="cart">Cart</a>
+      </nav>
+      <div class="header-actions">
+        <button class="cart-btn" data-route="cart" aria-label="Cart">
+          🛒 <span class="cart-count" data-count="0"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page" id="home-page">
+      <div class="hero">
+        <div>
+          <div class="hero-tag">New arrivals</div>
+          <h1 class="hero-title">Curated tech & lifestyle gear <span class="accent">for modern makers</span></h1>
+          <p class="hero-sub">Bold design, premium materials. Shop small-batch drops and timeless essentials.</p>
+          <button class="btn-primary" data-route="products">Shop Products</button>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-orb"></div>
+          <div class="hero-grid-deco"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page products-section" id="products-page">
+      <div class="filters-bar">
+        <div class="categories" id="categories"></div>
+        <div class="sort-filter">
+          <select id="sort-select">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input id="search-input" placeholder="Search products...">
+      </div>
+
+      <div class="products-grid" id="products-grid"></div>
+      <div class="no-results hidden" id="no-results">No products found.</div>
+    </section>
+
+    <section class="page" id="product-detail-page"></section>
+
+    <section class="page" id="cart-page">
+      <div class="cart-container">
+        <h2 class="page-title">Your Cart</h2>
+        <div class="cart-layout">
+          <div class="cart-items" id="cart-items"></div>
+          <aside class="cart-summary-box">
+            <div class="summary-title">Summary</div>
+            <div class="summary-row"><span>Items</span><span id="summary-items">0</span></div>
+            <div class="summary-row"><span>Subtotal</span><span id="summary-subtotal">$0.00</span></div>
+            <hr class="summary-divider">
+            <div class="summary-total"><strong>Total</strong><strong id="summary-total">$0.00</strong></div>
+            <button class="btn-checkout">Checkout</button>
+            <button class="btn-clear-cart">Clear cart</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
